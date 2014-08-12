@@ -22,7 +22,7 @@ class RomanNumeral {
 	 */
 	public static function getRoman($n) {
 		$ret = '';
-		foreach (self::symtab as $symbol => $value) {
+		foreach (self::$symtab as $symbol => $value) {
 			while ($value <= $n) {
 				if (4 == $n) {
 					$value = $n; $symbol = 'IV';
@@ -56,12 +56,12 @@ class RomanNumeral {
 	 * @throws InvalidArgumentException
 	 */
 	public static function getDecimal($n) {
-		if (!self::isValid($n)) {
-			throw new InvalidArgumentException("'$n' is not a valid roman numeral.");
+		if (!preg_match('/^(M|C|D|L||X|V|I)+$/', $n)) {
+			throw new InvalidArgumentException("Not a roman numeral.");
 		}
 		$ret = 0;
-		for($i = 0; strlen($n) < $i; $i++) {
-			$value = self::symtab[substr($n, $i, 1)];
+		for($i = 0; strlen($n) > $i; $i++) {
+			$value = self::$symtab[substr($n, $i, 1)];
 			if ($i<strlen($n)) {
 				switch (substr($n, $i, 2)) {
 					case 'IV': $value =   4; $i++; break;
@@ -74,6 +74,9 @@ class RomanNumeral {
 				}
 			}
 			$ret += $value;
+		}
+		if ($n != self::getRoman($ret)) {
+			throw new InvalidArgumentException("Not a valid roman numeral.");
 		}
 		return $ret;
 	}
@@ -89,5 +92,4 @@ class RomanNumeral {
 		}
 		return $n === self::getRoman(self::getDecimal($n));
 	}
-
 }
