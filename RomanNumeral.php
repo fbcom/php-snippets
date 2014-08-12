@@ -17,7 +17,8 @@ class RomanNumeral {
 	];
 
 	/**
-	 * @param $n decimal to convert
+	 * Converts a decimal value into the corresponding roman numeral.
+	 * @param int $n decimal
 	 * @return string roman numeral
 	 */
 	public static function getRoman($n) {
@@ -50,8 +51,8 @@ class RomanNumeral {
 	}
 
 	/**
-	 * Converts a roman numeral string to decimal
-	 * @param $n roman numeral to convert
+	 * Converts a roman numeral to the corresponding decimal value.
+	 * @param string $n roman numeral
 	 * @return int decimal
 	 * @throws InvalidArgumentException
 	 */
@@ -82,8 +83,8 @@ class RomanNumeral {
 	}
 
 	/**
-	 * Checks if a given string is a valid roman numeral
-	 * @param $n roman numeral
+	 * Checks if a given string is a valid roman numeral.
+	 * @param string $n string to check
 	 * @return bool
 	 */
 	function isValid($n) {
