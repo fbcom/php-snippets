@@ -1,12 +1,13 @@
 <?php
 /**
- * This is a PHP Implementation of the ALGO60 implementation of the algorithim for
- * calculating the transcendental number e with only integer arithmetic as prestented
- * by A.H.J.Sale in the article "The Calculation of e to Many Significant Digits"
- * published in The Computer Journal (1968) 11 (2): 229-230. doi: 10.1093/comjnl/11.2.229
+ * This is a PHP implementation of the algorithim for calculating
+ * the transcendental number e with only integer arithmetic as
+ * prestented by A.H.J.Sale, and implemented in ALGO60, in the article
+ * "The Calculation of e to Many Significant Digits" published in
+ * The Computer Journal (1968) 11 (2): 229-230. doi: 10.1093/comjnl/11.2.229
  * @see http://comjnl.oxfordjournals.org/content/11/2/229.abstract
  *
- * Code comment:
+ * Original code comment:
  *
  *   This function for calculating the transcendental number e
  *   to n correct decimal places uses only integer arithmetic,
