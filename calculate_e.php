@@ -48,7 +48,6 @@ function ecalculation($n, array &$d) {
 		}
 		$d[$i] = $carry;
 	}
-
 }
 
 /**
