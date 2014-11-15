@@ -60,7 +60,7 @@ function test() {
 	ecalculation($n, $d);
 	$e = '2.'.substr(implode('',$d),1);
 	assert($e == "2.7182818284590452353602874713526624977572470936999595749669676277240766303535475945713821785251664274");
-	echo "THe first $n digits of e are: $e";
+	echo "The first $n digits of e are: $e";
 }
 
 test();
